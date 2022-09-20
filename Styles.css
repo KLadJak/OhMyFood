@@ -3,7 +3,7 @@
 html, body {
     height: 100%;
     margin: auto;
-    font-family: roboto;
+    font-family: "roboto", sans-serif;
 }
 main {
     max-width: 768px;
@@ -52,32 +52,65 @@ header {
     margin: 5%;
     text-align: center;
 }
+.Titre h2 {
+    font-weight: bolder;
+    
+}
 .Bouton {
-    width: 60%;
+    width: 260px;
     height: 50px;
     border: 0;
     border-radius: 25px 25px 25px 25px;
     box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
     font-weight: bolder;
+    font-size: 100%;
     color: white;
+    background-image: linear-gradient(#FF79DA, #9356DC);
 }
 /*Nav*/
 nav {
     margin: 5%;
 }
 ol {
-    padding: 5%;
-}
-.Use {
-    max-width: 100%;
-    height: 70px;
-    border: 0;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
-    font-weight: bolder;
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
+    gap: 1rem;
+    padding: 5%;
+    counter-reset: Use;
+    list-style-type: none;
+}
+@media (max-width: 800px) {
+    ol {
+    flex-direction: column;
+    }
+}
+ol > li {
+    display: flex;
     align-items: center;
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+    border: 1px transparent;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+    font-weight: bold;
+}
+ol > li::before {
+    display: grid;
+    place-items: center;
+    counter-increment: Use;
+    content: "" counter(Use);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #9356DC;
+    color: white;
+    position: relative;
+    left: -2.8rem;
+}
+ol i {
+    margin-right: 2rem;
+    margin-left: -1rem;
+    font-size: 1.2rem;
 }
 /*Restaurants*/
 section {
@@ -89,7 +122,7 @@ section {
 }
 .Vignette {
     width: 100%;
-    height: 240px;
+    height: 30%;
     background-color: white;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 1px rgb(196, 194, 194);
