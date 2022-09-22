@@ -6,7 +6,7 @@ html, body {
     font-family: 'Roboto', sans-serif;
 }
 main {
-    max-width: 768px;
+    max-width: 1500px;
     margin: auto;
 }
 a{
@@ -75,6 +75,7 @@ nav {
 }
 ol {
     display: flex;
+    flex-flow: row wrap;
     flex-grow: 1;
     gap: 1rem;
     padding: 5%;
@@ -82,6 +83,7 @@ ol {
     list-style-type: none;
 }
 ol > li {
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -117,25 +119,26 @@ ol i {
     color: #9356DC;
 }
 /*Restaurants*/
+section {
+    margin: 5%;
+}
 #Restaurants {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
-    margin: 5%;
 }
 .Vignette {
     width: 100%;
     height: 30%;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 1px 1px 10px 1px rgb(196, 194, 194);
-    position: relative;
+    box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
     margin-bottom: 5%;
 }
 .Vignette__Image {
     object-fit: cover;
-    border-radius: 15px 15px 0px 0px
+    border-radius: 15px 15px 0px 0px;
 }
 .Vignette__Image--Taille {
     width: 100%;
@@ -145,7 +148,11 @@ ol i {
     margin: 4%;
     line-height: 1.5em;
 }
-.Vignette > span {
+.Badge {
+    position: relative;
+}
+.Badge::before {
+    content: "Nouveau";
     width: 7rem;
     height: 2rem;
     font-weight: bold;
@@ -155,8 +162,8 @@ ol i {
     background-color: #99E2D0;
     color: rgb(0, 135, 102);
     position: absolute;
-    top: 15px;
-    left: 19rem;
+    top: 1rem;
+    right: 1rem;
 }
 /*Footer*/
 footer {
@@ -179,15 +186,26 @@ ul {
     line-height: 2em;
 }
 /*Responsive*/
-@media (max-width: 1800px){
-    html, body{
-        margin: 0;
+@media (min-width: 1200px){
+    nav {
+        margin: 2%;
     }
-    main{
-        max-width: 1200px;
-        margin: 0;
+    ol {
+        justify-content: space-between;
+        padding: 4%;
+        gap: 2rem;
     }
-    ol{
-        flex-direction: column;
+    ol > li {
+        width: 25%;
     }
+    section {
+        margin: 2%;
+    }
+    #Restaurants {
+        align-items: center;
+        justify-content: space-around;
+        padding: 2%;
+    }
+    .Vignette {
+        width: 40%;
 }
