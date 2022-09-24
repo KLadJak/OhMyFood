@@ -175,14 +175,12 @@ section {
     bottom: 1.5rem;
     right: 2rem;
 }
-.Vignette .fa-solid {
-    opacity: 1;
-    background-color: linear-gradient(#FF79DA, #9356DC);;
+.fa-solid .fa-heart {
+    opacity: 0;
     background-image: linear-gradient(#FF79DA, #9356DC);
     background-clip: text;
-    color: transparent;
 }
-.Vignette .fa-solid:hover {
+.Vignette:hover .fa-solid {
     opacity: 1;
 }
 /*Footer*/
