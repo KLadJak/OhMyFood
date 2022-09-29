@@ -166,16 +166,17 @@ section {
         }
         .fa-heart {
             font-size: 2rem;
-            &::before {
                 position: absolute;
                 bottom: 1.5rem;
                 right: 2rem;
-            }
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
-                color: $graduant-rose-violet;
-            }
+        }
+        .fa-solid {
+            opacity: 0;
+        }
+        .fa-solid:hover {
+            cursor: pointer;
+            opacity: 1;
+            @include heart;
         }
     }
 }
