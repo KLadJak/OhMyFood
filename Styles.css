@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/*Page d'accueil*/
+footer {
+  max-width: 100%;
+  height: 200px;
+  padding: 2rem;
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
+/*Général*/
+body {
+  height: 100%;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+body main {
+  max-width: 1500px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Header*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+header .Logo {
+  width: 35%;
+  margin: 4%;
+}
+header .Recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  gap: 1rem;
+  background-color: rgb(234, 234, 234);
+  border-top: solid 2px rgb(230, 230, 230);
+  box-shadow: -1px 12px 5px 1px rgba(220, 220, 220, 0.137) inset;
+}
+header .Recherche__Champ {
+  max-width: 40%;
+  border: 0;
+  background-color: rgb(234, 234, 234);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+header .Recherche i {
+  font-size: large;
+  padding-left: 3rem;
+}
+header .Titre {
+  margin: 3%;
+  text-align: center;
+}
+header .Titre h2 {
+  font-size: 1.8rem;
+}
+header .Titre p {
+  font-size: 1.1em;
+}
+header .Titre .Bouton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 50px;
+  border: 0;
+  margin-left: 8%;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+  font-weight: bold;
+  font-size: 100%;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+header .Titre .Bouton:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  box-shadow: 0px 6px 15px 2px rgba(37, 37, 37, 0.418);
+}
+
+/*Nav*/
+nav {
+  margin: 5%;
+}
+nav ol {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  gap: 1rem;
+  padding: 5%;
+  counter-reset: Use;
+  list-style-type: none;
+}
+nav ol li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex-direction: row;
+  padding: 1.5rem 2rem;
+  border: 1px transparent;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+  font-weight: 500;
+  background-color: rgb(246, 246, 246);
+}
+nav ol li::before {
+  display: grid;
+  place-items: center;
+  counter-increment: Use;
+  content: "" counter(Use);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  position: relative;
+  left: -2.8rem;
+}
+nav ol li .fa-store {
+  color: #9356DC;
+  background-color: rgb(245, 237, 255);
+}
+nav ol i {
+  margin-right: 2rem;
+  margin-left: -1rem;
+  font-size: 1.2rem;
+}
+
+/*Restaurants*/
+section {
+  margin: 5%;
+}
+section #Restaurants {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+section #Restaurants .Vignette {
+  width: 100%;
+  height: 241px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+  margin-bottom: 5%;
+  position: relative;
+}
+section #Restaurants .Vignette__Image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+section #Restaurants .Vignette .Vignette__Image--Taille {
+  width: 100%;
+  height: 163px;
+}
+section #Restaurants .Vignette p {
+  margin: 3%;
+  line-height: 1.5em;
+}
+section #Restaurants .Badge::before {
+  content: "Nouveau";
+  width: 7rem;
+  height: 2rem;
+  font-weight: bold;
+  border: 1px transparent;
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
+  color: rgb(0, 135, 102);
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+section #Restaurants .fa-heart {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+}
+section #Restaurants .fa-solid {
+  opacity: 0;
+}
+section #Restaurants .fa-solid:hover {
+  cursor: pointer;
+  opacity: 1;
+  background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*Footer*/
+footer {
+  max-width: 100%;
+  height: 200px;
+  padding: 2rem;
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-weight: lighter;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
+/*Responsive*/
+@media (min-width: 1000px) {
+  section {
+    margin: 2%;
+  }
+  ol {
+    flex-flow: row nowrap;
+    gap: 2.5rem;
+  }
+  ol > li {
+    width: 25%;
+  }
+  #Restaurants {
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+  }
+  .Vignette {
+    width: 40%;
+  }
+  footer {
+    justify-content: center;
+  }
+  .Footer__List {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .Footer__List ul {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    -moz-column-gap: 2.8rem;
+         column-gap: 2.8rem;
+  }
+}
+@media (max-width: 460px) {
+  .Recherche {
+    gap: 0.5rem;
+  }
+  .fa-location-dot {
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 368px) {
+  .Recherche__Champ {
+    font-size: 0.8em;
+  }
+}/*# sourceMappingURL=Styles.css.map */
