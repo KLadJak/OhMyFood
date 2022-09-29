@@ -1,4 +1,7 @@
 /*Page d'accueil*/
+@import "./Sass/Utils/Variables";
+@import "./Sass/Utils/Mixin";
+@import "./Sass/Layout/Footer";
 /*Général*/
 body {
     height: 100%;
@@ -13,28 +16,24 @@ body {
 a{
     text-decoration: none;
     color: inherit;
-    width: auto;
 }
 /*Header*/
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-flow: column wrap;
     .Logo {
         width: 35%;
         margin: 4%;
     }
     .Recherche {
+        @include flex-center;
         width: 100%;
         height: 45px;
         gap: 1rem;
-        background-color: rgb(234,234,234);
+        background-color: $gris;
         border-top: solid 2px rgb(230,230,230);
         box-shadow: -1px 12px 5px 1px rgba(220, 220, 220, 0.137) inset;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
         &__Champ {
             max-width: 40%;
             border: 0;
@@ -57,19 +56,17 @@ header {
             font-size: 1.1em;
         }
         .Bouton {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex-center;
             width: 260px;
             height: 50px;
             border: 0;
             margin-left: 8%;
-            border-radius: 25px 25px 25px 25px;
-            box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+            @include border-radius;
+            @include box-shadow;
             font-weight: bold;
             font-size: 100%;
             color: white;
-            background: linear-gradient(#FF79DA, #9356DC);
+            background: $graduant-rose-violet;
             &:hover {
                 cursor: pointer;
                 opacity: 0.7;
@@ -91,14 +88,13 @@ nav {
         counter-reset: Use;
         list-style-type: none;
         li {
+            @include flex-start;
             width: 100%;
-            display: flex;
-            align-items: center;
             flex-direction: row;
             padding: 1.5rem 2rem;
             border: 1px transparent;
-            border-radius: 25px 25px 25px 25px;
-            box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
+            @include border-radius;
+            @include box-shadow;
             font-weight: 500;
             background-color: rgb(246, 246, 246);
             &::before {
@@ -161,10 +157,9 @@ section {
             height: 2rem;
             font-weight: bold;
             border: 1px transparent;
-            display: grid;
-            place-items: center;
-            background-color: #99E2D0;
-            color: rgb(0, 135, 102);
+            @include grid-center;
+            background-color: $vert;
+            color: $vert-darkest;
             position: absolute;
             top: 1rem;
             right: 1rem;
@@ -177,7 +172,9 @@ section {
                 right: 2rem;
             }
             &:hover {
-                background: linear-gradient(#FF79DA, #9356DC);
+                cursor: pointer;
+                opacity: 1;
+                color: $graduant-rose-violet;
             }
         }
     }
@@ -188,9 +185,7 @@ footer {
     height: 200px;
     padding: 2rem;
     background-color: rgb(53, 53, 53);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex-start;
     color: white;
     h3 {
         font-family: 'Shrikhand', cursive;
@@ -202,6 +197,7 @@ footer {
         line-height: 2em;
     }
 }
+
 
 
 /*Responsive*/

@@ -1,0 +1,17 @@
+footer {
+    max-width: 100%;
+    height: 200px;
+    padding: 2rem;
+    background-color: rgb(53, 53, 53);
+    @include flex-start;
+    color: white;
+    h3 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: lighter;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 2em;
+    }
+}
