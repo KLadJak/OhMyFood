@@ -58,6 +58,11 @@ header .Recherche {
   border-top: solid 2px rgb(230, 230, 230);
   box-shadow: -1px 12px 5px 1px rgba(220, 220, 220, 0.137) inset;
 }
+@media (max-width: 460px) {
+  header .Recherche {
+    gap: 0.5rem;
+  }
+}
 header .Recherche__Champ {
   max-width: 40%;
   border: 0;
@@ -65,13 +70,32 @@ header .Recherche__Champ {
   font-size: 1.1em;
   font-weight: bold;
 }
+@media (max-width: 368px) {
+  header .Recherche__Champ {
+    font-size: 0.8em;
+  }
+}
 header .Recherche i {
   font-size: large;
   padding-left: 3rem;
 }
+@media (max-width: 460px) {
+  header .Recherche i {
+    padding-left: 1rem;
+  }
+}
+header span {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background-color: rgb(246, 246, 246);
+}
 header .Titre {
-  margin: 3%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
 }
 header .Titre h2 {
   font-size: 1.8rem;
@@ -80,16 +104,13 @@ header .Titre p {
   font-size: 1.1em;
 }
 header .Titre .Bouton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   width: 260px;
   height: 50px;
   border: 0;
-  margin-left: 8%;
   border-radius: 25px 25px 25px 25px;
   box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
-  font-weight: bold;
   font-size: 100%;
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -102,7 +123,7 @@ header .Titre .Bouton:hover {
 
 /*Nav*/
 nav {
-  margin: 5%;
+  padding: 5%;
 }
 nav ol {
   display: flex;
@@ -112,6 +133,12 @@ nav ol {
   padding: 5%;
   counter-reset: Use;
   list-style-type: none;
+}
+@media (min-width: 1000px) {
+  nav ol {
+    flex-flow: row nowrap;
+    gap: 2.5rem;
+  }
 }
 nav ol li {
   display: flex;
@@ -125,6 +152,11 @@ nav ol li {
   box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
   font-weight: 500;
   background-color: rgb(246, 246, 246);
+}
+@media (min-width: 1000px) {
+  nav ol li {
+    width: 25%;
+  }
 }
 nav ol li::before {
   display: grid;
@@ -141,7 +173,7 @@ nav ol li::before {
 }
 nav ol li .fa-store {
   color: #9356DC;
-  background-color: rgb(245, 237, 255);
+  background-color: rgb(246, 246, 246);
 }
 nav ol i {
   margin-right: 2rem;
@@ -151,13 +183,21 @@ nav ol i {
 
 /*Restaurants*/
 section {
-  margin: 5%;
+  padding: 5%;
+  background-color: rgb(246, 246, 246);
 }
 section #Restaurants {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
+}
+@media (min-width: 1000px) {
+  section #Restaurants {
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+  }
 }
 section #Restaurants .Vignette {
   width: 100%;
@@ -167,6 +207,11 @@ section #Restaurants .Vignette {
   box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
   margin-bottom: 5%;
   position: relative;
+}
+@media (min-width: 1000px) {
+  section #Restaurants .Vignette {
+    width: 40%;
+  }
 }
 section #Restaurants .Vignette__Image {
   -o-object-fit: cover;
@@ -203,9 +248,10 @@ section #Restaurants .fa-heart {
 }
 section #Restaurants .fa-solid {
   opacity: 0;
-}
-section #Restaurants .fa-solid:hover {
   cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+section #Restaurants .fa-solid:active {
   opacity: 1;
   background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -224,6 +270,11 @@ footer {
   align-items: center;
   color: white;
 }
+@media (min-width: 1000px) {
+  footer {
+    justify-content: center;
+  }
+}
 footer h3 {
   font-family: "Shrikhand", cursive;
   font-weight: lighter;
@@ -233,39 +284,8 @@ footer ul {
   padding: 0;
   line-height: 2em;
 }
-
-/*Responsive*/
 @media (min-width: 1000px) {
-  section {
-    margin: 2%;
-  }
-  ol {
-    flex-flow: row nowrap;
-    gap: 2.5rem;
-  }
-  ol > li {
-    width: 25%;
-  }
-  #Restaurants {
-    align-items: center;
-    justify-content: space-around;
-    padding: 2%;
-  }
-  .Vignette {
-    width: 40%;
-  }
-  footer {
-    justify-content: center;
-  }
-  .Footer__List {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
-  }
-  .Footer__List ul {
+  footer ul {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
@@ -273,16 +293,13 @@ footer ul {
          column-gap: 2.8rem;
   }
 }
-@media (max-width: 460px) {
-  .Recherche {
-    gap: 0.5rem;
-  }
-  .fa-location-dot {
-    padding-left: 1rem;
-  }
-}
-@media (max-width: 368px) {
-  .Recherche__Champ {
-    font-size: 0.8em;
+@media (min-width: 1000px) {
+  footer .footer__List {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }/*# sourceMappingURL=Styles.css.map */

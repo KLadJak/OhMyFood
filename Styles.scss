@@ -33,22 +33,37 @@ header {
         background-color: $gris;
         border-top: solid 2px rgb(230,230,230);
         box-shadow: -1px 12px 5px 1px rgba(220, 220, 220, 0.137) inset;
-        
+        @media (max-width: 460px) {
+            gap: 0.5rem;
+        }
         &__Champ {
             max-width: 40%;
             border: 0;
             background-color: rgb(234,234,234);
             font-size: 1.1em;
             font-weight: bold;
+            @media (max-width: 368px){
+                font-size: 0.8em;
+            }
         }
         i {
             font-size: large;
             padding-left: 3rem;
+            @media (max-width: 460px){
+                padding-left: 1rem;
+            }
         }
     }
+    span {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        background-color: $blanc-cassé;
+    }
     .Titre {
-        margin: 3%;
         text-align: center;
+        @include flex-center;
+        flex-flow: column wrap;
         h2 {
             font-size: 1.8rem;
         }
@@ -56,14 +71,12 @@ header {
             font-size: 1.1em;
         }
         .Bouton {
-            @include flex-center;
+            @include grid-center;
             width: 260px;
             height: 50px;
             border: 0;
-            margin-left: 8%;
             @include border-radius;
             @include box-shadow;
-            font-weight: bold;
             font-size: 100%;
             color: white;
             background: $graduant-rose-violet;
@@ -78,7 +91,7 @@ header {
 
 /*Nav*/
 nav {
-    margin: 5%;
+    padding: 5%;
     ol {
         display: flex;
         flex-flow: row wrap;
@@ -87,6 +100,10 @@ nav {
         padding: 5%;
         counter-reset: Use;
         list-style-type: none;
+        @media (min-width: 1000px){
+            flex-flow: row nowrap;
+        gap: 2.5rem;
+        }
         li {
             @include flex-start;
             width: 100%;
@@ -96,7 +113,10 @@ nav {
             @include border-radius;
             @include box-shadow;
             font-weight: 500;
-            background-color: rgb(246, 246, 246);
+            background-color: $blanc-cassé;
+            @media (min-width: 1000px){
+                width: 25%;
+            }
             &::before {
                 display: grid;
                 place-items: center;
@@ -105,14 +125,14 @@ nav {
                 width: 1.5rem;
                 height: 1.5rem;
                 border-radius: 50%;
-                background-color: #9356DC;
+                background-color: $violet;
                 color: white;
                 position: relative;
                 left: -2.8rem;
             }
             .fa-store {
                 color: #9356DC;
-                background-color: rgb(245, 237, 255);
+                background-color: $blanc-cassé;
             }
         }
         i {
@@ -124,12 +144,18 @@ nav {
 }
 /*Restaurants*/
 section {
-    margin: 5%;
+    padding: 5%;
+    background-color: $blanc-cassé;
     #Restaurants {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-flow: row wrap;
+        @media (min-width: 1000px){
+            align-items: center;
+            justify-content: space-around;
+            padding: 2%;
+        }
         .Vignette {
             width: 100%;
             height: 241px;
@@ -138,6 +164,9 @@ section {
             box-shadow: 0px 6px 10px -3px rgb(196, 194, 194);
             margin-bottom: 5%;
             position: relative;
+            @media (min-width: 1000px){
+                width: 40%;
+            }
             &__Image {
                 object-fit: cover;
                 border-radius: 15px 15px 0px 0px;
@@ -172,9 +201,10 @@ section {
         }
         .fa-solid {
             opacity: 0;
-        }
-        .fa-solid:hover {
             cursor: pointer;
+            transition: all 0.4s ease-out;
+        }
+        .fa-solid:active {
             opacity: 1;
             @include heart;
         }
@@ -188,6 +218,9 @@ footer {
     background-color: rgb(53, 53, 53);
     @include flex-start;
     color: white;
+    @media (min-width: 1000px){
+        justify-content: center;
+    }
     h3 {
         font-family: 'Shrikhand', cursive;
         font-weight: lighter;
@@ -196,60 +229,21 @@ footer {
         list-style-type: none;
         padding: 0;
         line-height: 2em;
+        @media (min-width: 1000px){
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            column-gap: 2.8rem;
+        }
     }
-}
-
-
-
-/*Responsive*/
-@media (min-width: 1000px){
-    section {
-        margin: 2%;
-    }
-    ol {
-        flex-flow: row nowrap;
-        gap: 2.5rem
-    }
-    ol > li {
-        width: 25%;
-    }
-    #Restaurants {
-        align-items: center;
-        justify-content: space-around;
-        padding: 2%;
-    }
-    .Vignette {
-        width: 40%;
-    }
-    footer {
-        justify-content: center;
-    }
-    .Footer__List {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 30%;
-        margin-right: 30%;
-    }
-    .Footer__List ul {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
-        column-gap: 2.8rem
-    }
-}
-
-@media (max-width: 460px){
-    .Recherche {
-        gap: 0.5rem
-    }
-    .fa-location-dot {
-        padding-left: 1rem;
-    }
-}
-@media (max-width: 368px){
-    .Recherche__Champ{
-        font-size: 0.8em;
+    .footer__List {
+        @media (min-width: 1000px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
     }
 }
