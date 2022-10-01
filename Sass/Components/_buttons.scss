@@ -1,0 +1,16 @@
+.Bouton {
+    @include grid-center;
+    width: 260px;
+    height: 50px;
+    border: 0;
+    @include border-radius;
+    @include box-shadow;
+    font-size: 100%;
+    color: white;
+    background: $graduant-rose-violet;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        box-shadow: 0px 6px 15px 2px rgba(37, 37, 37, 0.418);
+    }
+}

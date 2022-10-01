@@ -5,13 +5,32 @@ footer {
     background-color: rgb(53, 53, 53);
     @include flex-start;
     color: white;
+    @media (min-width: 1000px){
+        justify-content: center;
+    }
     h3 {
-        font-family: 'Shrikhand', cursive;
+        font-family: 'Shrikhand', "cursive";
         font-weight: lighter;
     }
     ul {
         list-style-type: none;
         padding: 0;
         line-height: 2em;
+        @media (min-width: 1000px){
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            column-gap: 2.8rem;
+        }
+    }
+    .footer__List {
+        @media (min-width: 1000px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
     }
 }

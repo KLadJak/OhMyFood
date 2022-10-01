@@ -1,0 +1,17 @@
+section {
+    .fa-heart {
+        font-size: 2rem;
+            position: absolute;
+            bottom: 1.5rem;
+            right: 2rem;
+    }
+    .fa-solid {
+        opacity: 0;
+        cursor: pointer;
+        transition: all 0.4s ease-out;
+    }
+    .fa-solid:active {
+        opacity: 1;
+        @include heart;
+    }
+}

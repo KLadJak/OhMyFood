@@ -1,12 +1,11 @@
 /*Page d'accueil*/
 @import "./Sass/Utils/Variables";
 @import "./Sass/Utils/Mixin";
+@import "./Sass/Base/StyleLiens";
+@import "./Sass/Layout/BodyMain";
 @import "./Sass/Layout/Footer";
 /*Général*/
 body {
-    height: 100%;
-    margin: auto;
-    font-family: 'Roboto', sans-serif;
     .Preloader {
         position: fixed;
         top: 0;
@@ -56,15 +55,7 @@ body {
             }
         }
     }
-}
-    main {
-        max-width: 1500px;
-        margin: auto;
     }
-}
-a{
-    text-decoration: none;
-    color: inherit;
 }
 /*Header*/
 header {
@@ -103,7 +94,7 @@ header {
             }
         }
     }
-    span {
+    .Background_header {
         width: 100%;
         padding-top: 2rem;
         padding-bottom: 3rem;
@@ -259,40 +250,4 @@ section {
         }
     }
 }
-/*Footer*/
-footer {
-    max-width: 100%;
-    height: 200px;
-    padding: 2rem;
-    background-color: rgb(53, 53, 53);
-    @include flex-start;
-    color: white;
-    @media (min-width: 1000px){
-        justify-content: center;
-    }
-    h3 {
-        font-family: 'Shrikhand', "cursive";
-        font-weight: lighter;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-        line-height: 2em;
-        @media (min-width: 1000px){
-            display: flex;
-            justify-content: space-around;
-            flex-flow: row wrap;
-            column-gap: 2.8rem;
-        }
-    }
-    .footer__List {
-        @media (min-width: 1000px){
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-left: 30%;
-            margin-right: 30%;
-        }
-    }
-}
+
