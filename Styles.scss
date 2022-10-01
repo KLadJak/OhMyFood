@@ -15,7 +15,7 @@ body {
         height: 100%;
         background-color: white;
         opacity: 0.9;
-        z-index: 20;
+        z-index: 3;
         @include flex-center;
         flex-direction: column;
         animation: Preloader 300ms ease-in-out 3s forwards;
@@ -25,13 +25,13 @@ body {
             }
             100% {
                 opacity: 0;
-                z-index: 0;
+                z-index: -1;
             }
         }
     }
     h1 {
         font-family: 'Shrikhand', "cursive";
-        font-size: 6rem;
+        font-size: 3.5rem;
     }
     .loader {
         display: block;
