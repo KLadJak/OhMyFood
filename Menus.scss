@@ -1,8 +1,26 @@
 @import "./Sass/Utils/Variables";
 @import "./Sass/Utils/Mixin";
+@import "./Sass/Base/Police";
 @import "./Sass/Base/StyleLiens";
+@import "./Sass/Base/StylesList.scss";
 @import "./Sass/Components/buttons";
+@import "./Sass/Components/Heart";
 @import "./Sass/Layout/BodyMain";
 @import "./Sass/Layout/TitleM";
 @import "./Sass/Layout/Footer";
 
+main {
+    background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    header {
+        border: 1px solid transparent;
+        background-color: white;
+    }
+    section {
+        @include flex-center;
+        flex-direction: column;
+        div {
+            @include space-around;
+            position: relative;
+        }
+    }
+}

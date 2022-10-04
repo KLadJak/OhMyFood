@@ -1,14 +1,27 @@
 @charset "UTF-8";
 /*Page d'accueil*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+body h1 {
+  font-family: "Shrikhand", "cursive";
+  font-size: 2rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
 body {
   height: 100%;
   margin: auto;
-  font-family: "Roboto", sans-serif;
 }
 body main {
   max-width: 1500px;
@@ -34,11 +47,6 @@ footer h3 {
   font-family: "Shrikhand", "cursive";
   font-weight: lighter;
 }
-footer ul {
-  list-style-type: none;
-  padding: 0;
-  line-height: 2em;
-}
 @media (min-width: 1000px) {
   footer ul {
     display: flex;
@@ -52,7 +60,7 @@ footer ul {
   footer .footer__List {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-left: 30%;
     margin-right: 30%;
@@ -93,10 +101,6 @@ body .Preloader {
     opacity: 0;
     z-index: -1;
   }
-}
-body h1 {
-  font-family: "Shrikhand", "cursive";
-  font-size: 3.5rem;
 }
 body .loader {
   display: block;

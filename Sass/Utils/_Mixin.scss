@@ -11,6 +11,11 @@
     justify-content: flex-start;
     align-items: center;
 }
+@mixin space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 @mixin border-radius {
     border-radius: 25px 25px 25px 25px;
 }
