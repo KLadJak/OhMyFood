@@ -3,5 +3,12 @@ body {
     h1 {
         font-family: 'Shrikhand', "cursive";
         font-size: 2rem;
+        margin: 0;
+    }
+    h2, h3 {
+        margin: 0;
+    }
+    strong {
+        font-weight: bolder;
     }
 }

@@ -4,6 +4,13 @@ body {
 body h1 {
   font-family: "Shrikhand", "cursive";
   font-size: 2rem;
+  margin: 0;
+}
+body h2, body h3 {
+  margin: 0;
+}
+body strong {
+  font-weight: bolder;
 }
 
 a {
@@ -55,11 +62,13 @@ section .fa-solid:active {
   -webkit-text-fill-color: transparent;
 }
 
-body {
+html, body {
+  max-width: 100%;
   height: 100%;
-  margin: auto;
+  margin: 0;
 }
-body main {
+html main, body main {
+  display: block;
   max-width: 1500px;
   margin: auto;
 }
@@ -119,22 +128,22 @@ footer h3 {
   }
 }
 
-main {
-  background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+main .Image_Background {
+  box-sizing: content-box;
+  width: 100%;
 }
-main header {
-  border: 1px solid transparent;
-  background-color: white;
-}
-main section {
+
+section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-flow: row wrap;
 }
-main section div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+section .Section_Titre {
   position: relative;
+  padding: 1rem;
+  width: 100%;
+}
+section .Section_Titre i {
+  right: 1rem;
 }/*# sourceMappingURL=Menus.css.map */

@@ -16,6 +16,11 @@
     justify-content: space-around;
     align-items: center;
 }
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 @mixin border-radius {
     border-radius: 25px 25px 25px 25px;
 }

@@ -10,17 +10,20 @@
 @import "./Sass/Layout/Footer";
 
 main {
-    background: url(./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    header {
-        border: 1px solid transparent;
-        background-color: white;
+    .Image_Background {
+        box-sizing: content-box;
+        width: 100%;
     }
-    section {
-        @include flex-center;
-        flex-direction: column;
-        div {
-            @include space-around;
-            position: relative;
+}
+section {
+    @include flex-center;
+    flex-flow: row wrap;
+    .Section_Titre {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+        i {
+            right: 1rem;
         }
     }
 }
