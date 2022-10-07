@@ -5,11 +5,12 @@ body {
 }
 body h1 {
   font-family: "Shrikhand", "cursive";
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 body h2, body h3 {
   margin: 0;
+  font-size: 1.4rem;
 }
 body strong {
   font-weight: bolder;
