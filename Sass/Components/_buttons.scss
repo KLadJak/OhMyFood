@@ -1,9 +1,13 @@
+@import "../Utils/Mixin";
+.Bloc_Bouton {
+    @include flex-center;
+}
 .Bouton {
     @include grid-center;
-    width: 260px;
+    width: 12rem;
     height: 50px;
     border: 0;
-    margin: 4%;
+    margin: 3%;
     @include border-radius;
     @include box-shadow;
     font-size: 100%;
