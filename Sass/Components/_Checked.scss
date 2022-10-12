@@ -1,0 +1,12 @@
+.Menu-Card_Confirm {
+    width: 16%;
+    height: 5.3rem;
+    background-color: $vert;
+    border-radius: 0 20px 20px 0;
+    .fa-solid {
+        height: 100%;
+        font-size: 1.8rem;
+        @include grid-center;
+        color: $blanc-cassé;
+    }
+}

@@ -1,4 +1,5 @@
 section {
+    .Section_Titre {
     .fa-heart {
         font-size: 2rem;
             position: absolute;
@@ -14,4 +15,5 @@ section {
         opacity: 1;
         @include heart;
     }
+}
 }
