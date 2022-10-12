@@ -108,6 +108,7 @@ header .Logo {
   height: 5.3rem;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
+  overflow: hidden;
 }
 .Menu-Card_Confirm .fa-solid {
   height: 100%;
@@ -172,7 +173,6 @@ section ul .Menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
 }
 @media (min-width: 1000px) {
   section ul .Menu {
@@ -187,6 +187,7 @@ section ul .Menu .Menu-Card_Detail {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 section ul .Menu .Price {
   font-weight: 700;

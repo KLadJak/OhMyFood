@@ -50,18 +50,16 @@ section {
             @include border-radiusM;
             margin: 5% 0;
             @include space-between;
-            flex-direction: row;
             @media (min-width: 1000px) {
                 margin: 3%;
             }
             .Menu-Card {
                 width: 100%;
-            padding: 2%;
+                padding: 2%;
             }
             .Menu-Card_Detail {
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
+                @include space-between;
             }
             .Price {
                 font-weight: 700;
