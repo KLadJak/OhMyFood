@@ -104,11 +104,12 @@ header .Logo {
 }
 
 .Menu-Card_Confirm {
-  width: 16%;
+  width: 20%;
   height: 5.3rem;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
-  overflow: hidden;
+  margin-right: -5.5rem;
+  margin-left: 2rem;
 }
 .Menu-Card_Confirm .fa-solid {
   height: 100%;
@@ -116,6 +117,32 @@ header .Logo {
   display: grid;
   place-items: center;
   color: rgb(246, 246, 246);
+}
+
+.Menu:hover .Menu-Card_Confirm {
+  margin-right: 0;
+  cursor: pointer;
+  transition-duration: 0.6s;
+}
+.Menu:hover .fa-solid {
+  -webkit-animation: rotate-spin 0.6s;
+          animation: rotate-spin 0.6s;
+}
+@-webkit-keyframes rotate-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes rotate-spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 section .Section_Menu {
@@ -134,12 +161,9 @@ section .Section_Titre i {
   top: 1.3rem;
   right: 1rem;
 }
-section .Section_Menu--ul {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 @media (min-width: 1000px) {
   section .Section_Menu--ul {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -173,6 +197,9 @@ section ul .Menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media (min-width: 1000px) {
   section ul .Menu {
@@ -182,12 +209,21 @@ section ul .Menu {
 section ul .Menu .Menu-Card {
   width: 100%;
   padding: 2%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 section ul .Menu .Menu-Card_Detail {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+section ul .Menu .Menu_Text {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 section ul .Menu .Price {
   font-weight: 700;

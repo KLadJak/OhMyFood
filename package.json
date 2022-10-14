@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./Styles.scss:./Styles.css --style compressed", 
-    "sassM": "sass --watch ./Menus.scss:./Menus.css --style compressed"
+    "sassM": "sass --watch ./Menus.scss:./Menus.css --style compressed",
+    "sassBis": "sass --watch ./_MenusBis.scss:./MenusBis.css --style compressed"
   },
   "repository": {
     "type": "git",
