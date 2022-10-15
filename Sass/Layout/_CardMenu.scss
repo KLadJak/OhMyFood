@@ -1,25 +1,20 @@
-@import "../Components/Checked";
+@import "../Components/AnimationChecked";
+@import "../Components/Animation_Appear";
 section {
     .Section_Menu {
         padding: 1rem;
-        margin-top: -2rem;
         position: relative;
+        margin-top: -7rem;
         background-color: $blanc-cassé;
         border-radius: 2.5rem 2.5rem 0 0;
     }
     .Section_Titre {
-        padding: 1rem 0;
+        padding: 1rem 1rem 1rem 0;
         max-width: 100%;
         position: relative;
         i {
             top: 1.3rem;
             right: 1rem;
-        }
-    }
-    .Section_Menu--ul {
-        @media (min-width: 1000px) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
         }
     }
     ul {
@@ -29,9 +24,6 @@ section {
             text-transform: uppercase;
             font-weight: 400;
             position: relative;
-            @media (min-width: 1000px) {
-                margin-left: 1.2rem;
-            }
             &::after {
                 content: "";
                 background-color: $vert;
@@ -51,10 +43,8 @@ section {
             @include space-between;
             overflow: hidden;
             white-space: nowrap;
-                text-overflow: ellipsis;
-            @media (min-width: 1000px) {
-                margin: 3%;
-            }
+            text-overflow: ellipsis;
+            
             .Menu-Card {
                 width: 100%;
                 padding: 2%;

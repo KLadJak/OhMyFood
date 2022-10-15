@@ -1,0 +1,38 @@
+@media (min-width: 1000px) {
+    footer {
+        justify-content: center !important;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            column-gap: 2.8rem;
+        }
+        .footer__List {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+    }
+    .Section_Menu--ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    section {
+        ul {
+            margin-left: 1.2rem; 
+        }
+        .Menu {
+            margin: 3%;
+        }
+}
+@media (min-width: 540px) {
+    .Menu {
+        max-width: 490px;
+    }
+}
+    
+    

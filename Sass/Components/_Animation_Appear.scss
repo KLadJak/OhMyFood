@@ -1,0 +1,10 @@
+.Menu {
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}n) {
+            animation-delay: #{$i * 100}ms;
+        }
+    }
+    animation: appear 1s ease-in 100ms;
+    animation-fill-mode: both;
+    @include Appear;
+}

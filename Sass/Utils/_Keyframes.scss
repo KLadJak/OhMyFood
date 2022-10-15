@@ -1,0 +1,22 @@
+@mixin CheckSpinner {
+    @keyframes rotate-spin {
+        0% {
+            transform: rotate(-270deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+}
+@mixin Appear {
+    @keyframes appear {
+        0% {
+            transform: translatey(-30%);
+            opacity: 0;
+        }
+            100% {
+            transform: translatey(1);
+            opacity: 1;
+        }
+    }
+}

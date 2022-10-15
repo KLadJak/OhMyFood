@@ -1,21 +1,14 @@
 @import "./Sass/Utils/Variables";
 @import "./Sass/Utils/Mixin";
+@import "./Sass/Utils/Keyframes";
+@import "./Sass/Utils/MediaQueries";
 @import "./Sass/Base/Police";
 @import "./Sass/Base/StyleLiens";
 @import "./Sass/Base/StylesList";
+@import "./Sass/Components/Image-Background";
 @import "./Sass/Components/buttons";
 @import "./Sass/Components/Heart";
 @import "./Sass/Layout/BodyMain";
 @import "./Sass/Layout/TitleM";
 @import "./Sass/Layout/CardMenu";
 @import "./Sass/Layout/Footer";
-
-main {
-    .Image_Background {
-        width: 100%;
-        height: 50vh;
-        display: block;
-        box-sizing: border-box;
-        object-fit: cover;
-    }
-}
