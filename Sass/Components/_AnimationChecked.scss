@@ -12,14 +12,25 @@
         color: $blanc-cassé;
     }
 }
-.Menu:hover {
+.Menu:active {
     .Menu-Card_Confirm {
     margin-right: 0;
-    cursor: pointer;
     transition-duration: 0.6s;
     }
     .fa-solid {
         animation: rotate-spin 0.6s;
         @include CheckSpinner;
+    }
+}
+.Menu:hover {
+    @media (min-width: 1000px) {
+        .Menu-Card_Confirm {
+            margin-right: 0;
+            transition-duration: 0.6s;
+            }
+            .fa-solid {
+                animation: rotate-spin 0.6s;
+                @include CheckSpinner;
+            }
     }
 }

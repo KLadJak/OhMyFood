@@ -32,33 +32,9 @@ footer {
   align-items: center;
   color: white;
 }
-@media (min-width: 1000px) {
-  footer {
-    justify-content: center;
-  }
-}
 footer h3 {
   font-family: "Shrikhand", "cursive";
   font-weight: lighter;
-}
-@media (min-width: 1000px) {
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    -moz-column-gap: 2.8rem;
-         column-gap: 2.8rem;
-  }
-}
-@media (min-width: 1000px) {
-  footer .footer__List {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: 30%;
-    margin-right: 30%;
-  }
 }
 
 /*Général*/
@@ -359,4 +335,13 @@ section #Restaurants .fa-solid:active {
   background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (min-width: 1000px) {
+  section #Restaurants .fa-solid:hover {
+    opacity: 1;
+    background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }/*# sourceMappingURL=Styles.css.map */

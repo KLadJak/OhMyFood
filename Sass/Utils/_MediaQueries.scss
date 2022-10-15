@@ -1,4 +1,11 @@
 @media (min-width: 1000px) {
+    header {
+        height: 4rem !important;
+        gap: 35% !important;
+        .Logo {
+            width: 25% !important;
+        }
+    }
     footer {
         justify-content: center !important;
         ul {
@@ -16,11 +23,6 @@
             margin-right: 30%;
         }
     }
-    .Section_Menu--ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        }
-    }
     section {
         ul {
             margin-left: 1.2rem; 
@@ -28,6 +30,14 @@
         .Menu {
             margin: 3%;
         }
+        .Section_Menu--ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .Section_Menu {
+            margin-top: -4rem !important;
+        }
+    }
 }
 @media (min-width: 540px) {
     .Menu {

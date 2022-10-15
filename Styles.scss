@@ -246,10 +246,16 @@ section {
             opacity: 0;
             cursor: pointer;
             transition: all 0.4s ease-out;
-        }
-        .fa-solid:active {
-            opacity: 1;
-            @include heart;
+            &:active {
+                opacity: 1;
+                @include heart;
+            }
+            @media (min-width: 1000px) {
+                &:hover {
+                    opacity: 1;
+                    @include heart;
+                }
+            }
         }
     }
 }
