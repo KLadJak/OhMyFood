@@ -11,11 +11,11 @@
 @mixin Appear {
     @keyframes appear {
         0% {
-            transform: translatey(-30%);
+            transform: translatey(10%);
             opacity: 0;
         }
             100% {
-            transform: translatey(1);
+            transform: translatey(0);
             opacity: 1;
         }
     }

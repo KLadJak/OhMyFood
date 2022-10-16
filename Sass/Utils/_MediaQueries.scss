@@ -1,11 +1,11 @@
 @media (min-width: 1000px) {
-    header {
-        height: 4rem !important;
-        gap: 35% !important;
-        .Logo {
-            width: 25% !important;
+    #Header_Menu {
+            height: 4rem !important;
+            gap: 35% !important;
+            .Logo {
+                width: 25% !important;
+            }
         }
-    }
     footer {
         justify-content: center !important;
         ul {
