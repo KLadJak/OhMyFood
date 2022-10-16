@@ -1,4 +1,4 @@
-@media (min-width: 1000px) {
+@media (min-width: 992px) {
     #Header_Menu {
             height: 4rem !important;
             gap: 35% !important;
@@ -32,7 +32,7 @@
         }
         .Section_Menu--ul {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 33%);
         }
         .Section_Menu {
             margin-top: -4rem !important;
@@ -41,7 +41,7 @@
 }
 @media (min-width: 540px) {
     .Menu {
-        max-width: 490px;
+        max-width: 490px !important;
     }
 }
     
