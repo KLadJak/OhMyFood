@@ -2,9 +2,6 @@
     #Header_Menu {
             height: 4rem !important;
             gap: 35% !important;
-            .Logo {
-                width: 25% !important;
-            }
         }
     footer {
         justify-content: center !important;
@@ -34,14 +31,17 @@
             display: grid;
             grid-template-columns: repeat(3, 33%);
         }
-        .Section_Menu {
-            margin-top: -4rem !important;
-        }
     }
 }
 @media (min-width: 540px) {
-    .Menu {
-        max-width: 490px !important;
+    main {
+        .Menu {
+            max-width: 490px !important;
+        }
+        .Image_Background {
+            height: 40vh !important;
+            object-fit: cover !important;
+        }
     }
 }
     

@@ -3,8 +3,85 @@
     height: 4rem !important;
     gap: 35% !important;
   }
-  #Header_Menu .Logo {
-    width: 25% !important;
+  footer {
+    justify-content: center !important;
+  }
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    -moz-column-gap: 2.8rem;
+         column-gap: 2.8rem;
+  }
+  footer .footer__List {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  section ul {
+    margin-left: 1.2rem;
+  }
+  section .Menu {
+    margin: 3%;
+  }
+  section .Section_Menu--ul {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+  }
+}
+@media (min-width: 540px) {
+  main .Menu {
+    max-width: 490px !important;
+  }
+  main .Image_Background {
+    height: 40vh !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+body h1 {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0 3.5rem 0 0;
+}
+body h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+body h3 {
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+body strong {
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 2em;
+}
+
+@media (min-width: 992px) {
+  #Header_Menu {
+    height: 4rem !important;
+    gap: 35% !important;
   }
   footer {
     justify-content: center !important;
@@ -34,54 +111,28 @@
     display: grid;
     grid-template-columns: repeat(3, 33%);
   }
-  section .Section_Menu {
-    margin-top: -4rem !important;
-  }
 }
 @media (min-width: 540px) {
-  .Menu {
+  main .Menu {
     max-width: 490px !important;
   }
+  main .Image_Background {
+    height: 40vh !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
+  }
 }
-body {
-  font-family: "Roboto", sans-serif;
-}
-body h1 {
-  font-family: "Shrikhand", "cursive";
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 0;
-  padding: 0 5rem 0 0;
-}
-body h2 {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: lighter;
-  text-transform: uppercase;
-}
-body h3 {
-  font-size: 1.3rem;
-  font-weight: lighter;
-}
-body strong {
-  font-weight: bolder;
-  font-size: 1.3rem;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  line-height: 2em;
-}
-
 main .Image_Background {
   width: 100%;
-  height: 50vh;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .Image_Background2 {
+  width: 100%;
+  height: 35vh;
   display: block;
   box-sizing: border-box;
   -o-object-fit: cover;
@@ -110,6 +161,7 @@ main .Image_Background {
 .Bouton:hover {
   cursor: pointer;
   opacity: 0.7;
+  transition-duration: 0.5s;
   box-shadow: 0px 6px 15px 2px rgba(37, 37, 37, 0.418);
 }
 
@@ -124,21 +176,12 @@ section .Section_Titre .fa-solid {
   cursor: pointer;
   transition: all 0.4s ease-out;
 }
-section .Section_Titre .fa-solid:active {
+section .Section_Titre .fa-solid:hover {
   opacity: 1;
   background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@media (min-width: 1000px) {
-  section .Section_Titre .fa-solid:hover {
-    opacity: 1;
-    background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }
 
 html, body {
@@ -162,12 +205,12 @@ header {
   gap: 25%;
 }
 header .fa-arrow-left {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin: 3%;
 }
 header .Logo {
-  width: 35%;
+  width: 70%;
 }
 
 .Menu-Card_Confirm {
@@ -308,7 +351,7 @@ header .Logo {
 section .Section_Menu {
   padding: 1rem;
   position: relative;
-  margin-top: -7rem;
+  margin-top: -4rem;
   background-color: rgb(246, 246, 246);
   border-radius: 2.5rem 2.5rem 0 0;
 }

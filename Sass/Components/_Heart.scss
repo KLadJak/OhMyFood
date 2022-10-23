@@ -11,15 +11,9 @@ section {
             cursor: pointer;
             transition: all 0.4s ease-out;
         }
-        .fa-solid:active {
+        .fa-solid:hover {
             opacity: 1;
             @include heart;
-        }
-        .fa-solid:hover {
-            @media (min-width: 1000px) {
-                opacity: 1;
-                @include heart;
-            }
         }
     }
 }

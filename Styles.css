@@ -5,9 +5,6 @@
     height: 4rem !important;
     gap: 35% !important;
   }
-  #Header_Menu .Logo {
-    width: 25% !important;
-  }
   footer {
     justify-content: center !important;
   }
@@ -36,13 +33,15 @@
     display: grid;
     grid-template-columns: repeat(3, 33%);
   }
-  section .Section_Menu {
-    margin-top: -4rem !important;
-  }
 }
 @media (min-width: 540px) {
-  .Menu {
+  main .Menu {
     max-width: 490px !important;
+  }
+  main .Image_Background {
+    height: 40vh !important;
+    -o-object-fit: cover !important;
+       object-fit: cover !important;
   }
 }
 a {
@@ -241,6 +240,7 @@ header .Titre .Bouton {
 header .Titre .Bouton:hover {
   cursor: pointer;
   opacity: 0.7;
+  transition-duration: 0.5s;
   box-shadow: 0px 6px 15px 2px rgba(37, 37, 37, 0.418);
 }
 
@@ -378,19 +378,10 @@ section #Restaurants .fa-solid {
   cursor: pointer;
   transition: all 0.4s ease-out;
 }
-section #Restaurants .fa-solid:active {
+section #Restaurants .fa-solid:hover {
   opacity: 1;
   background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-@media (min-width: 1000px) {
-  section #Restaurants .fa-solid:hover {
-    opacity: 1;
-    background: linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    background-clip: -webkit-linear-gradient(to bottom, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }/*# sourceMappingURL=Styles.css.map */
